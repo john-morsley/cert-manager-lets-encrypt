@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: tls-ingress
+spec:
+  dnsNames:
+    - cert-manager-lets-encrypt.morsley.io
+  secretName: tls-ingress
+  issuerRef:
+    group: cert-mamanger.io
+    kind: Issuer
+    name: lets-encrypt-test
+#  commonName: concourse.morsley.io
+#  acme: 
+#    config:
+#      - http01:
+#          ingress: concourse-ingress
+#        domains:
+#          - concourse.morsley.io

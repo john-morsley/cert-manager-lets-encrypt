@@ -27,3 +27,20 @@ override.tf.json
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
+
+# JetBrains Rider
+.idea
+
+# Secrets!
+*.tfvars
+
+# Keys
+*keys/*.pub
+*keys/*.pem
+
+# RKE
+*k8s/kube-config.yaml
+terraform-provider-rke-*/
+
+# Shared Scripts
+*shared-scripts/

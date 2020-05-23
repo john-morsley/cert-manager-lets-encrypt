@@ -1,0 +1,29 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Issuer
+metadata:
+  name: lets-encrypt-real
+spec:
+  acme:    
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: admin@morsley.uk
+    privateKeySecretRef:
+      name: lets-encrypt-real
+    solvers:  
+    - http01:
+        ingress:
+          class: nginx
+---
+apiVersion: cert-manager.io/v1alpha2
+kind: Issuer
+metadata:
+  name: lets-encrypt-test
+spec:
+  acme:
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    email: admin@morsley.uk
+    privateKeySecretRef:
+      name: lets-encrypt-test
+    solvers:
+    - http01:
+        ingress:
+          class: nginx
