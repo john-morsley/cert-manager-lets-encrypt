@@ -3,19 +3,20 @@ kind: Ingress
 metadata:
   name: ingress
   annotations:
-    cert-manager.io/issuer: lets-encrypt-test
+    cert-manager.io/issuer: lets-encrypt-real
+    #cert-manager.io/issuer: lets-encrypt-test
     #nginx.ingress.kubernetes.io/secure-backends: "true"
     #nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
   tls:
   - hosts:
-    - cert-manager-lets-encrypt.morsley.io
+    - example.morsley.io
     secretName: tls-ingress
   rules:
-  - host: cert-manager-lets-encrypt.morsley.io
+  - host: example.morsley.io
     http:
       paths:
       - backend:
-          serviceName: web
+          serviceName: nginx-service
           servicePort: 80
         #path: /

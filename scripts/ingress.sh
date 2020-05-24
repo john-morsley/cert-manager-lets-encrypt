@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 #    _____                               
 #   |_   _|                              
@@ -10,6 +10,7 @@
 #               |___/                   
 
 echo "================================================================ ADDING INGRESS"
+
 
 if [[ -z "${KUBERNETES_FOLDER}" ]]; then   
     echo "No KUBERNETES_FOLDER supplied."
@@ -33,7 +34,7 @@ echo "--------------------------------------------------------------------------
                                         
 export KUBECONFIG=${KUBE_CONFIG}
 
-kubectl apply --filename ${KUBERNETES_FOLDER}/ingress.yaml \
+kubectl apply --filename ${KUBERNETES_FOLDER}/nginx-ingress.yaml \
               --namespace ${NAMESPACE}
 
 echo "============================================================ INGRESS ADDED - OK"

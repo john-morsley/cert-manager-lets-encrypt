@@ -7,29 +7,29 @@
 #                    | |                  
 #                    |_|
 
-//output "private_ip_node_1" {
-//  value = module.node-1-ec2.private_ip
-//}
-//
-//output "public_ip_node_1" {
-//  value = module.node-1-ec2.public_ip
-//}
-//
-//output "public_dns_node_1" {
-//  value = module.node-1-ec2.public_dns
-//}
-//
-//output "ssh_command_node_1" {
-//  value = module.node-1-ec2.ssh_command
-//}
-//
-//output "export_kubeconfig_command" {
-//  value = module.multiple-node-cluster.export_kubeconfig_command
-//}
-//
-//output "kubectl_kubeconfig_command" {
-//  value = module.multiple-node-cluster.kubectl_kubeconfig_command
-//}
+output "private_ip_node_1" {
+  value = module.node-1-ec2.private_ip
+}
+
+output "public_ip_node_1" {
+  value = module.node-1-ec2.public_ip
+}
+
+output "public_dns_node_1" {
+  value = module.node-1-ec2.public_dns
+}
+
+output "ssh_command_node_1" {
+  value = module.node-1-ec2.ssh_command
+}
+
+output "export_kubeconfig_command" {
+  value = module.multiple-node-cluster.export_kubeconfig_command
+}
+
+output "kubectl_kubeconfig_command" {
+  value = module.multiple-node-cluster.kubectl_kubeconfig_command
+}
 
 output "bucket_name" {
   value = local.bucket_name

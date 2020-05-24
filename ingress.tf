@@ -10,7 +10,8 @@
 resource "null_resource" "ingress" {
 
   depends_on = [
-    module.multiple-node-cluster
+    module.multiple-node-cluster,
+    null_resource.is-nginx-ready
   ]
 
   # https://www.terraform.io/docs/provisioners/local-exec.html

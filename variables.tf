@@ -59,13 +59,13 @@ variable "ec2_instance_type" {
 
 variable "cluster_name" {
   type = string
-  default = "cert-manager-lets-encrypt"
+  default = "example"
 }
 
 # Project
 
 variable "namespace" {
-  default = "cert-manager-lets-encrypt"
+  default = "example"
 }
 
 # Domain
@@ -75,7 +75,7 @@ variable "domain" {
 }
 
 variable "sub_domain" {
-  default = "cert-manager-lets-encrypt"
+  default = "example"
 }
 
 # Cert-Manager
